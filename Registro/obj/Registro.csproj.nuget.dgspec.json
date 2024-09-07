@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\paula\\source\\repos\\Registro\\Registro\\Registro.csproj": {}
+    "C:\\Users\\paula\\source\\repos\\ASP-SQLSERVER\\Registro\\Registro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\paula\\source\\repos\\Registro\\Registro\\Registro.csproj": {
+    "C:\\Users\\paula\\source\\repos\\ASP-SQLSERVER\\Registro\\Registro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\paula\\source\\repos\\Registro\\Registro\\Registro.csproj",
+        "projectUniqueName": "C:\\Users\\paula\\source\\repos\\ASP-SQLSERVER\\Registro\\Registro.csproj",
         "projectName": "Registro",
-        "projectPath": "C:\\Users\\paula\\source\\repos\\Registro\\Registro\\Registro.csproj",
+        "projectPath": "C:\\Users\\paula\\source\\repos\\ASP-SQLSERVER\\Registro\\Registro.csproj",
         "packagesPath": "C:\\Users\\paula\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\paula\\source\\repos\\Registro\\Registro\\obj\\",
+        "outputPath": "C:\\Users\\paula\\source\\repos\\ASP-SQLSERVER\\Registro\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\paula\\AppData\\Roaming\\NuGet\\NuGet.Config",
