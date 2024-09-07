@@ -8,7 +8,7 @@ CREATE TABLE USUARIOS(
 	Correo varchar(50)
 )
 
-select * from USUARIOS;
+select * from Usuarios;
 
 create procedure sp_registrar
 @Nombre varchar(50),
@@ -18,4 +18,10 @@ as begin
 insert into Usuarios values(@Nombre, @Edad, @Correo)
 end
 
+create procedure sp_usuarios
+as begin 
+select * from Usuarios;
+end;
+
+EXEC sp_helptext 'sp_usuarios';
 

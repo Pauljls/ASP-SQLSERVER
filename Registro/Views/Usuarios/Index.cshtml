@@ -1,2 +1,37 @@
-﻿@model UsuarioModel
-<h1>Usuario</h1>
+﻿@{
+    ViewData["Title"] = "Inicio de Usuario";
+}
+
+<br />
+<div class="text-center">
+    <h1 class="display-4">Registros de usuarios</h1>
+    <br/>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id Usuario</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Correo</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    if (ViewBag.Usuarios != null)
+                    {
+                        foreach (var item in ViewBag.Usuarios)
+                        {
+                            <tr>
+                                <td>@item.IDUsuario</td>
+                                <td>@item.Nombre</td>
+                                <td>@item.Edad</td>
+                                <td>@item.Email</td>
+                            </tr>    
+                        }    
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Registro.Models;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace Registro.Controllers
@@ -46,7 +47,36 @@ namespace Registro.Controllers
         }
 
         public IActionResult Index() {
-            return View();
+            using (SqlConnection con = new(_configuration["ConnectionStrings:Conexion"])) {
+                using (SqlCommand cmd = new("sp_usuarios",con))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    con.Open();
+                    //EJECUCION DEL COMANDO Y PREPARACION DE LOS DATOS PARA
+                    //INSERTARLOS EN UNA TABLA
+                    SqlDataAdapter da = new(cmd);
+                    //CREACION DE UNA TABLA
+                    DataTable dt = new();
+                    //LLENADO DE LA TABLA
+                    da.Fill(dt);
+                    da.Dispose();
+                    //CREACION DE LA LISTA PARA EXPORTAR
+                    List<UsuarioModel> lista = new();
+                    for (int i = 0; i < dt.Rows.Count; i++) {
+                        lista.Add(new UsuarioModel()
+                        {
+                            IDUsuario = Convert.ToInt32(dt.Rows[i][0]),
+                            Nombre = (dt.Rows[i][1]).ToString(),
+                            Edad = Convert.ToInt32(dt.Rows[i][2]),
+                            Email = (dt.Rows[i][3]).ToString()
+                        });
+                    }
+                    ViewBag.Usuarios = lista;
+                    con.Close();
+
+                };
+            }
+                return View();
         }
     }
 }
