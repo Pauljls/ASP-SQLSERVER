@@ -17,3 +17,5 @@ create procedure sp_registrar
 as begin 
 insert into Usuarios values(@Nombre, @Edad, @Correo)
 end
+
+

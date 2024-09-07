@@ -28,3 +28,12 @@ C:\Users\paula\source\repos\Registro\Registro\obj\Debug\net8.0\refint\Registro.d
 C:\Users\paula\source\repos\Registro\Registro\obj\Debug\net8.0\Registro.pdb
 C:\Users\paula\source\repos\Registro\Registro\obj\Debug\net8.0\Registro.genruntimeconfig.cache
 C:\Users\paula\source\repos\Registro\Registro\obj\Debug\net8.0\ref\Registro.dll
+C:\Users\paula\source\repos\Registro\Registro\bin\Debug\net8.0\System.Data.SqlClient.dll
+C:\Users\paula\source\repos\Registro\Registro\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\paula\source\repos\Registro\Registro\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\paula\source\repos\Registro\Registro\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\paula\source\repos\Registro\Registro\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\paula\source\repos\Registro\Registro\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\paula\source\repos\Registro\Registro\obj\Debug\net8.0\Registro.csproj.AssemblyReference.cache
+C:\Users\paula\source\repos\Registro\Registro\obj\Debug\net8.0\Registro.sourcelink.json
+C:\Users\paula\source\repos\Registro\Registro\obj\Debug\net8.0\Registro.csproj.Up2Date
