@@ -129,7 +129,20 @@ namespace Registro.Controllers
             {
                 var usuario = new UsuarioModel();
                 using (SqlConnection con = new(_connection["ConnectionStrings:Conexion"])) {
-
+                    using (SqlCommand cmd = new("sp_usuario", con)) {
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                        con.Open();
+                        SqlDataAdapter da = new(cmd);
+                        DataTable dt = new();
+                        da.Fill(dt);
+                        da.Dispose();
+                        usuario.IDUsuario = id;
+                        usuario.Nombre = Convert.ToString(dt.Rows[0][1]);
+                        usuario.Edad = Convert.ToInt32(dt.Rows[0][2]);
+                        usuario.Email = Convert.ToString(dt.Rows[0][3]);
+                        con.Close();
+                    }
                     using (SqlCommand cmd = new("sp_delete", con))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -138,7 +151,7 @@ namespace Registro.Controllers
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
-                    return Ok();
+                    return Ok(usuario);
                 }
             }
             catch(Exception ex){
